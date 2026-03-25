@@ -82,23 +82,22 @@ elseif O==4
     T=T.*e;
     figure;
     plot(T,Y);
+    
 elseif O==5
        e=input('Enter the Compressing coff.:  ');
-     
-       while e==0;
+     while e==0
            disp("Error division by ZERO...:) ");
-           break;
-       end
+           e=input('Enter the Compressing coff.:  ');
+
+     end
            T=T./e;
            figure;
            plot(T,Y);
    
- elseif    O==6
-           while O==6;
+   elseif  O==6
                break;
-           end
     
-else
+   else
     disp("Not Identified :) ... Enter no. from 1 to 6:   ");
     i=i;
     continue;
