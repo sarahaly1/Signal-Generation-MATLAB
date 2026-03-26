@@ -59,14 +59,9 @@ i=i+1;
 
 end
 plot(T,Y);
-
+while 1
  disp("1.Amplitude Scaling 2.Time Reversal 3.Time Shift 4.Expanding 5.Compressing 6.None");
  O= input("Enter the Operation:   ");
- while O>6
-     disp("choose no. from 1 to 6");
-      disp("1.Amplitude Scaling 2.Time Reversal 3.Time Shift 4.Expanding 5.Compressing 6.None");
-     O= input("Enter the Operation:   ");
- end
  if O==1
      a=input("Enter the Amplitude:   ");
      Y=a.*Y;
@@ -92,11 +87,13 @@ elseif O==5
      while e==0
            disp("Error division by ZERO...:) ");
            e=input('Enter the Compressing coff.:  ');
-
      end
            T=T./e;
            figure;
-           plot(T,Y);
-   else  O==6
-     
+           plot(T,Y);  
+ elseif O==6
+     break;
+ else  
+disp("enter a no. from 1 to 6!");
+ end
  end
